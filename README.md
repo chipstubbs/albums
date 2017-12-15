@@ -1,6 +1,7 @@
 # albums
 
 ## Inside directory
+Run the following commands 
 - ```npm install --save axios```
 - ```npm install -g eslint```
 - ```npm install --save-dev eslint-config-rallycoding```
