@@ -4,7 +4,7 @@ import Card from './Card';
 import CardSection from './CardSection';
 
 // {album} was just props and inside the function props.album.title | props.album.artist | etc 
-// was destructed below
+// was destructered below
 const AlbumDetail = ({album}) => {
     const { title, artist, thumbnail_image, image } = album;
     // destructure styles
