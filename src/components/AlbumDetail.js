@@ -1,17 +1,18 @@
 import React from 'react';
-import { Text, View, Image } from 'react-native';
+import { Text, View, Image, Linking } from 'react-native';
 import Card from './Card';
 import CardSection from './CardSection';
+import Button from './Button';
 
 // {album} was just props and inside the function props.album.title | props.album.artist | etc 
 // was destructered below
-const AlbumDetail = ({album}) => {
-    const { title, artist, thumbnail_image, image } = album;
+const AlbumDetail = ({ album }) => {
+    const { title, artist, thumbnail_image, image, url } = album;
     // destructure styles
     const { 
         thumbnailStyle, 
         headerContentStyle, 
-        thumbContainer ,
+        thumbContainer,
         headerTitle,
         albumImage
     } = styles;
@@ -36,6 +37,12 @@ const AlbumDetail = ({album}) => {
                     source={{ uri: image }}
                     style={albumImage}
                 />
+            </CardSection>
+
+            <CardSection>
+                <Button onPress={() => Linking.openURL(url)}>
+                    Buy Now
+                </Button>
             </CardSection>
         </Card>
     );
